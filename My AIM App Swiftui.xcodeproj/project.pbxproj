@@ -14,6 +14,11 @@
 		2538E2F429A55B120008DE92 /* My_AIM_App_SwiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2F329A55B120008DE92 /* My_AIM_App_SwiftuiTests.swift */; };
 		2538E2FE29A55B120008DE92 /* My_AIM_App_SwiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2FD29A55B120008DE92 /* My_AIM_App_SwiftuiUITests.swift */; };
 		2538E30029A55B120008DE92 /* My_AIM_App_SwiftuiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2FF29A55B120008DE92 /* My_AIM_App_SwiftuiUITestsLaunchTests.swift */; };
+		2552A98629A55CAF00B6BE5F /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98529A55CAF00B6BE5F /* MainAppView.swift */; };
+		2552A98829A55CCB00B6BE5F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98729A55CCB00B6BE5F /* UserProfileView.swift */; };
+		2552A98A29A55CD900B6BE5F /* UserResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98929A55CD900B6BE5F /* UserResultsView.swift */; };
+		2552A98C29A55CE900B6BE5F /* UserFeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98B29A55CE900B6BE5F /* UserFeesView.swift */; };
+		2552A98E29A55D1C00B6BE5F /* NextClassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		2538E2F929A55B120008DE92 /* My AIM App SwiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My AIM App SwiftuiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2538E2FD29A55B120008DE92 /* My_AIM_App_SwiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_AIM_App_SwiftuiUITests.swift; sourceTree = "<group>"; };
 		2538E2FF29A55B120008DE92 /* My_AIM_App_SwiftuiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_AIM_App_SwiftuiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2552A98529A55CAF00B6BE5F /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		2552A98729A55CCB00B6BE5F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		2552A98929A55CD900B6BE5F /* UserResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsView.swift; sourceTree = "<group>"; };
+		2552A98B29A55CE900B6BE5F /* UserFeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeesView.swift; sourceTree = "<group>"; };
+		2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextClassButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,9 @@
 			children = (
 				2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */,
 				2538E2E429A55B100008DE92 /* ContentView.swift */,
+				2552A98429A55BC700B6BE5F /* Models */,
+				2552A98329A55BB000B6BE5F /* View Models */,
+				2538E30C29A55B770008DE92 /* Views */,
 				2538E2E629A55B120008DE92 /* Assets.xcassets */,
 				2538E2E829A55B120008DE92 /* Preview Content */,
 			);
@@ -125,6 +138,32 @@
 				2538E2FF29A55B120008DE92 /* My_AIM_App_SwiftuiUITestsLaunchTests.swift */,
 			);
 			path = "My AIM App SwiftuiUITests";
+			sourceTree = "<group>";
+		};
+		2538E30C29A55B770008DE92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2552A98529A55CAF00B6BE5F /* MainAppView.swift */,
+				2552A98729A55CCB00B6BE5F /* UserProfileView.swift */,
+				2552A98929A55CD900B6BE5F /* UserResultsView.swift */,
+				2552A98B29A55CE900B6BE5F /* UserFeesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2552A98329A55BB000B6BE5F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		2552A98429A55BC700B6BE5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2552A98A29A55CD900B6BE5F /* UserResultsView.swift in Sources */,
 				2538E2E529A55B100008DE92 /* ContentView.swift in Sources */,
+				2552A98E29A55D1C00B6BE5F /* NextClassButton.swift in Sources */,
+				2552A98C29A55CE900B6BE5F /* UserFeesView.swift in Sources */,
+				2552A98629A55CAF00B6BE5F /* MainAppView.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
+				2552A98829A55CCB00B6BE5F /* UserProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
