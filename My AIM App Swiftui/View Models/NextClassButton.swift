@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct NextClassButton: View {
+    var course: String = "MATH 351"
+    var location: String = "PB 001"
+    var time: String = "10:30 am - 12:30 pm"
+    
     var body: some View {
         Button {
             
@@ -28,8 +32,22 @@ struct NextClassButton: View {
                     VStack {
                         Spacer()
                         HStack(alignment: .bottom) {
-                            Text("Next\nClass")
-                                .font(.title)
+                            VStack(alignment: .leading) {
+                                Text("Next\nClass")
+                                    .font(.title)
+                                HStack {
+                                    Text("Course: ")
+                                    Text(course)
+                                }
+                                HStack {
+                                    Text("Location: ")
+                                    Text(location)
+                                }
+                                HStack {
+                                    Text("Time: ")
+                                    Text(time)
+                                }
+                            }
                             
                             Spacer()
                         }
