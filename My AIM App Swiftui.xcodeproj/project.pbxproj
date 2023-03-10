@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250F4E1929BA8CF700814AD8 /* NewsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F4E1829BA8CF700814AD8 /* NewsListRow.swift */; };
 		2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */; };
 		2538E2E529A55B100008DE92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2E429A55B100008DE92 /* ContentView.swift */; };
 		2538E2E729A55B120008DE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2538E2E629A55B120008DE92 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250F4E1829BA8CF700814AD8 /* NewsListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRow.swift; sourceTree = "<group>"; };
 		2538E2DF29A55B100008DE92 /* My AIM App Swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My AIM App Swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_AIM_App_SwiftuiApp.swift; sourceTree = "<group>"; };
 		2538E2E429A55B100008DE92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */,
+				250F4E1829BA8CF700814AD8 /* NewsListRow.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				2552A98E29A55D1C00B6BE5F /* NextClassButton.swift in Sources */,
 				2552A98C29A55CE900B6BE5F /* UserFeesView.swift in Sources */,
 				2552A98629A55CAF00B6BE5F /* MainAppView.swift in Sources */,
+				250F4E1929BA8CF700814AD8 /* NewsListRow.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
 				2552A98829A55CCB00B6BE5F /* UserProfileView.swift in Sources */,
 			);

@@ -24,20 +24,24 @@ struct NextClassButton: View {
                             Spacer()
                             HStack(alignment: .bottom) {
                                 VStack(alignment: .leading) {
-                                    Text("Next\nClass")
-                                        .font(.title)
+                                    Text("Next Class")
+                                        .font(.title2)
+                                        .fontWeight(.bold)
                                     HStack {
                                         Text("Course: ")
                                         Text(course)
                                     }
+                                    .font(.caption)
                                     HStack {
                                         Text("Location: ")
                                         Text(location)
                                     }
+                                    .font(.caption)
                                     HStack {
                                         Text("Time: ")
                                         Text(time)
                                     }
+                                    .font(.caption)
                                 }
                                 
                                 Spacer()
@@ -76,11 +80,12 @@ struct NextClassButton: View {
                         .scaledToFit()
                         .shadow(radius: 2, x: 3, y: 5)
                         .offset(y: -20)
+                        .padding(.trailing)
                 }
                 .padding()
             }
             .frame(width: UIScreen.main.bounds.width * 0.9,
-                   height: 200)
+                   height: 180)
         }
     }
 }
@@ -88,5 +93,8 @@ struct NextClassButton: View {
 struct NextClassButton_Previews: PreviewProvider {
     static var previews: some View {
         NextClassButton()
+        
+        NextClassButton()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }
