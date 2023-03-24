@@ -1,39 +1,30 @@
 //
-//  ContentView.swift
+//  SwiftUIView.swift
 //  My AIM App Swiftui
 //
-//  Created by Emmanuel Donkor on 21/02/2023.
+//  Created by Emmanuel Donkor on 24/03/2023.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct SwiftUIView: View {
     @State var articles: [Article] = []
+    @State var proceed: Bool = false
     
     var body: some View {
         VStack {
-            Text("Articles")
-            Text("\(articles.count)")
-            
-            List(articles, id: \.title) { article in
-                VStack(alignment: .leading) {
-                    Text(article.title)
-                        .font(.headline)
-                    Text(article.description ?? "")
-                        .font(.body)
-                    AsyncImage(url: article.urlToImage ?? nil) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        ProgressView()
+            if !proceed {
+                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                .task {
+                    fetchArticles()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        proceed = true
                     }
                 }
+                
+            } else {
+                ContentView(articles: articles)
             }
-            .environmentObject(ImageCache.shared)
-        }
-        .task {
-            fetchArticles()
         }
     }
     
@@ -61,19 +52,13 @@ struct ContentView: View {
                 print(error.localizedDescription)
             }
         }.resume()
+        
+    //    return articles
     }
 }
 
-class ImageCache: ObservableObject {
-    static let shared = ImageCache()
-    
-    @Published private var cache = [URL: UIImage]()
-    
-    func set(_ image: UIImage, for url: URL) {
-        cache[url] = image
-    }
-    
-    func get(for url: URL) -> UIImage? {
-        cache[url]
+struct SwiftUIView_Previews: PreviewProvider {
+    static var previews: some View {
+        SwiftUIView()
     }
 }
