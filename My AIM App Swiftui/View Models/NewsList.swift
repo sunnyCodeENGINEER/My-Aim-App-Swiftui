@@ -22,7 +22,7 @@ struct NewsList: View {
     
     func fetchArticles() {
         let apiKey = "4dc3ec1f64c0486e97f6ef5f7e04b14d"
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=\(apiKey)")
+        let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=\(apiKey)")
         
         let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad)
         

@@ -8,8 +8,49 @@
 import SwiftUI
 
 struct MainAppView: View {
+    // A temporary fix to check if everything else is working accordingly
+    @State var articles: [Article] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List(articles, id: \.title) { article in
+                NewsListRow(title: article.title, summary: article.description ?? "", urlToImage: article.urlToImage)
+                
+            }
+        }
+        .task {
+            fetchArticles()
+        }
+        
+    }
+    
+    func fetchArticles() {
+        let apiKey = "4dc3ec1f64c0486e97f6ef5f7e04b14d"
+        let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=4dc3ec1f64c0486e97f6ef5f7e04b14d")
+        
+        let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let data = data else {
+                print("No Data was received from NewsApi.org")
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let articleListTesponse = try decoder.decode(ArticleListResponse.self, from: data)
+                articles = articleListTesponse.articles
+                print(articleListTesponse.articles)
+            } catch {
+                print("here\n")
+                print(error.localizedDescription)
+            }
+        }.resume()
     }
 }
 
