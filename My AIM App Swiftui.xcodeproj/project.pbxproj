@@ -12,6 +12,7 @@
 		250F4E1D29CE250400814AD8 /* ArticleListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F4E1C29CE250400814AD8 /* ArticleListResponse.swift */; };
 		250F4E1F29CE2AE500814AD8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F4E1E29CE2AE500814AD8 /* SwiftUIView.swift */; };
 		250F4E2129CE6B7700814AD8 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F4E2029CE6B7700814AD8 /* CachedAsyncImage.swift */; };
+		250F4E2329CE6B7700814AD8 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F4E2229CE6B7700814AD8 /* NewsList.swift */; };
 		2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */; };
 		2538E2E529A55B100008DE92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538E2E429A55B100008DE92 /* ContentView.swift */; };
 		2538E2E729A55B120008DE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2538E2E629A55B120008DE92 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		250F4E1C29CE250400814AD8 /* ArticleListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListResponse.swift; sourceTree = "<group>"; };
 		250F4E1E29CE2AE500814AD8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		250F4E2029CE6B7700814AD8 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		250F4E2229CE6B7700814AD8 /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		2538E2DF29A55B100008DE92 /* My AIM App Swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My AIM App Swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_AIM_App_SwiftuiApp.swift; sourceTree = "<group>"; };
 		2538E2E429A55B100008DE92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */,
 				250F4E1829BA8CF700814AD8 /* NewsListRow.swift */,
+				250F4E2229CE6B7700814AD8 /* NewsList.swift */,
 				250F4E1A29BB494500814AD8 /* MainViewHeader.swift */,
 			);
 			path = "View Models";
@@ -318,6 +321,7 @@
 				2552A98C29A55CE900B6BE5F /* UserFeesView.swift in Sources */,
 				2552A98629A55CAF00B6BE5F /* MainAppView.swift in Sources */,
 				250F4E1D29CE250400814AD8 /* ArticleListResponse.swift in Sources */,
+				250F4E2329CE6B7700814AD8 /* NewsList.swift in Sources */,
 				250F4E1B29BB494500814AD8 /* MainViewHeader.swift in Sources */,
 				250F4E1929BA8CF700814AD8 /* NewsListRow.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
