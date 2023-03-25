@@ -25,6 +25,7 @@
 		2552A98A29A55CD900B6BE5F /* UserResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98929A55CD900B6BE5F /* UserResultsView.swift */; };
 		2552A98C29A55CE900B6BE5F /* UserFeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98B29A55CE900B6BE5F /* UserFeesView.swift */; };
 		2552A98E29A55D1C00B6BE5F /* NextClassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */; };
+		25B2393029CF1ED000407474 /* DetailedArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2392F29CF1ED000407474 /* DetailedArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		2552A98929A55CD900B6BE5F /* UserResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsView.swift; sourceTree = "<group>"; };
 		2552A98B29A55CE900B6BE5F /* UserFeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeesView.swift; sourceTree = "<group>"; };
 		2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextClassButton.swift; sourceTree = "<group>"; };
+		25B2392F29CF1ED000407474 /* DetailedArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				250F4E1829BA8CF700814AD8 /* NewsListRow.swift */,
 				250F4E2229CE6B7700814AD8 /* NewsList.swift */,
 				250F4E1A29BB494500814AD8 /* MainViewHeader.swift */,
+				25B2392F29CF1ED000407474 /* DetailedArticleView.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				250F4E1D29CE250400814AD8 /* ArticleListResponse.swift in Sources */,
 				250F4E2329CE6B7700814AD8 /* NewsList.swift in Sources */,
 				250F4E1B29BB494500814AD8 /* MainViewHeader.swift in Sources */,
+				25B2393029CF1ED000407474 /* DetailedArticleView.swift in Sources */,
 				250F4E1929BA8CF700814AD8 /* NewsListRow.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
 				250F4E2129CE6B7700814AD8 /* CachedAsyncImage.swift in Sources */,

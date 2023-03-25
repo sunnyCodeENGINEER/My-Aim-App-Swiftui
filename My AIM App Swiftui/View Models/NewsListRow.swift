@@ -11,7 +11,6 @@ struct NewsListRow: View {
     var title: String
     var summary: String
     var urlToImage: URL?
-//https://img.ksl.com/slc/2921/292161/29216170.jpg?filter=kslv2/responsive_story_lg
 
     var body: some View {
         HStack(alignment: .top) {
