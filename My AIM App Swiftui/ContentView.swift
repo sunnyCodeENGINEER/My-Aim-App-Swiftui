@@ -25,14 +25,32 @@ struct ContentView: View {
                         image
                             .resizable()
                             .scaledToFit()
-                    } placeholder: {
+                        } placeholder: {
                         ProgressView()
                     }
+                    
+//                    CacheAsyncImage(url: article.urlToImage ?? URL(string: "")) { phase in
+//                        switch phase {
+//                        case .empty:
+//                            ProgressView()
+//                        case .success(let image):
+//                            image
+//                                .resizable()
+//                                .scaledToFit()
+//                        case .failure(let error):
+//                            Image(systemName: "exclamationmark.triangle.fill")
+//                        default:
+//                            Image(systemName: "exclamationmark.triangle.fill")
+//                        }
+//                    }
                 }
             }
-            .environmentObject(ImageCache.shared)
+//            .environmentObject(ImageCache.shared)
         }
         .task {
+            print("\(URLCache.shared.memoryCapacity)")
+            URLCache.shared.memoryCapacity = 1024 * 1024 * 512
+            print("\(URLCache.shared.memoryCapacity)")
             fetchArticles()
         }
     }
@@ -41,7 +59,9 @@ struct ContentView: View {
         let apiKey = "4dc3ec1f64c0486e97f6ef5f7e04b14d"
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=\(apiKey)")
         
-        URLSession.shared.dataTask(with: url!) { data, response, error in
+        let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -64,16 +84,16 @@ struct ContentView: View {
     }
 }
 
-class ImageCache: ObservableObject {
-    static let shared = ImageCache()
-    
-    @Published private var cache = [URL: UIImage]()
-    
-    func set(_ image: UIImage, for url: URL) {
-        cache[url] = image
-    }
-    
-    func get(for url: URL) -> UIImage? {
-        cache[url]
-    }
-}
+//class ImageCache: ObservableObject {
+//    static let shared = ImageCache()
+//    
+//    @Published private var cache = [URL: UIImage]()
+//    
+//    func set(_ image: UIImage, for url: URL) {
+//        cache[url] = image
+//    }
+//    
+//    func get(for url: URL) -> UIImage? {
+//        cache[url]
+//    }
+//}
