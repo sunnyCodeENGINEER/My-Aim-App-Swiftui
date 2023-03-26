@@ -44,10 +44,6 @@ struct NewsListRow: View {
                 }
             }
             
-//            RoundedRectangle(cornerRadius: 10)
-//                .frame(width: 100, height: 100)
-//                .padding(.horizontal, 10)
-            
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.body)

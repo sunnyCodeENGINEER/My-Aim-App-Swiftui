@@ -13,9 +13,15 @@ struct MainAppView: View {
     
     var body: some View {
         VStack {
-            List(articles, id: \.title) { article in
-                NewsListRow(title: article.title, summary: article.description ?? "", urlToImage: article.urlToImage)
-                
+            NavigationStack {
+                List(articles, id: \.title) { article in
+                    NavigationLink {
+                        DetailedArticleView(article: article)
+                    } label: {
+                        NewsListRow(title: article.title, summary: article.description ?? "", urlToImage: article.urlToImage)
+                    }
+                }
+                .listStyle(.plain)
             }
         }
         .task {
@@ -25,7 +31,7 @@ struct MainAppView: View {
     }
     
     func fetchArticles() {
-        let apiKey = "4dc3ec1f64c0486e97f6ef5f7e04b14d"
+//        let apiKey = "4dc3ec1f64c0486e97f6ef5f7e04b14d"
         let url = URL(string: "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=4dc3ec1f64c0486e97f6ef5f7e04b14d")
         
         let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad)
