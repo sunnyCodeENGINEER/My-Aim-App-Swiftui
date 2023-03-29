@@ -11,10 +11,15 @@ struct NewsListRow: View {
     var title: String
     var summary: String
     var urlToImage: URL?
+    
+//    @State var url: String
+    @State var image: UIImage? = nil
+    @State var errorMessage: String? = nil
+    @State var isLoading: Bool = false
 
     var body: some View {
         HStack(alignment: .top) {
-            AsyncImage(url: urlToImage) { phase in
+            /*AsyncImage(url: urlToImage) { phase in
                 switch phase {
                 case .empty:
                     ProgressView()
@@ -42,6 +47,27 @@ struct NewsListRow: View {
                         .cornerRadius(10)
                         .padding(.horizontal, 10)
                 }
+            }*/
+            
+            if image != nil {
+                Image(uiImage: image!)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 10)
+            } else if errorMessage != nil {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .resizable()
+                    .padding()
+                    .frame(width: 100, height: 100)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.gray))
+                    .cornerRadius(10)
+                    .padding(.horizontal, 10)
+            } else {
+                ProgressView()
+                    .frame(width: 100, height: 100)
             }
             
             VStack(alignment: .leading) {
@@ -78,6 +104,38 @@ struct NewsListRow: View {
         .background(RoundedRectangle(cornerRadius: 10)
             .fill(.blue.opacity(0.3))
             .padding(2))
+        .task {
+            loadImageData()
+        }
+    }
+    
+    func loadImageData() {
+        guard image == nil && !isLoading else {
+            return
+        }
+        
+        guard let url = urlToImage else {
+            errorMessage = "There was an error"
+            return
+        }
+        
+        isLoading = true
+        errorMessage = nil
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                self.isLoading = false
+                if let error = error {
+                    self.errorMessage = error.localizedDescription
+                } else if let data = data, let image = UIImage(data: data) {
+                    self.image = image
+                } else {
+                    self.errorMessage = "Something EVIL went wrong... :("
+                }
+            }
+        }
+        
+        task.resume()
     }
 }
 
