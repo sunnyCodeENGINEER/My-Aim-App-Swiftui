@@ -11,12 +11,17 @@ struct NewsList: View {
     @State var articles: [Article] = []
     
     var body: some View {
-        List(articles, id: \.title) { article in
-            NewsListRow(title: article.title, summary: article.description ?? "", urlToImage: article.urlToImage)
-                .task {
-                    fetchArticles()
-                }
+        VStack {
+            Text("Latest on Campus")
+            
+            List(articles, id: \.title) { article in
+                NewsListRow(title: article.title, summary: article.description ?? "", urlToImage: article.urlToImage)
+                    .task {
+                        fetchArticles()
+                    }
+            }
         }
+//        .navigationTitle("Latest on Campus")
         
     }
     

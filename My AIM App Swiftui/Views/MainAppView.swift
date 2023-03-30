@@ -22,6 +22,7 @@ struct MainAppView: View {
                     }
                 }
                 .listStyle(.plain)
+                .navigationTitle("Latest on Campus")
             }
         }
         .task {
