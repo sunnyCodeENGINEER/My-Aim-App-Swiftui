@@ -15,13 +15,16 @@ final class ChatGPTModel: ObservableObject {
     
     private var client: OpenAISwift?
     
-    func setup(text: String, completion: @escaping (String) -> Void) {
-        client = OpenAISwift(authToken: "sk-QXt4bE1MioeMKFGAJXNRT3BlbkFJyS1df5lolztcpNPhork")
-        
-        client?.sendCompletion(with: text, maxTokens: 5000, completionHandler: { result in
+    func setup() {
+        client = OpenAISwift(authToken: "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")
+    }
+    
+    func send(text: String, completion: @escaping (String) -> Void) {
+        client?.sendCompletion(with: text, maxTokens: 500, completionHandler: { result in
             switch result {
             case .success(let model):
                 let output = model.choices.first?.text ?? ""
+                completion(output)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -8,8 +8,46 @@
 import SwiftUI
 
 struct PersonalStudyGuideView: View {
+    @ObservedObject var chatGPTviewModel = ChatGPTModel()
+    @State var text: String = ""
+    @State var models = [String]()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            ScrollView(.vertical, showsIndicators: true) {
+                ForEach(models, id: \.self) { string in
+                    Text(string)
+                }
+            }
+            Spacer()
+            HStack {
+                TextField("Type here...", text: $text)
+                Button {
+                    send()
+                } label: {
+                    Text("Send")
+                }
+            }
+//            .padding()
+        }
+        .padding()
+        .onAppear {
+            chatGPTviewModel.setup()
+        }
+    }
+    
+    func send() {
+        guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return
+        }
+        
+        models.append("Me: \(text)")
+        chatGPTviewModel.send(text: text) { respnse in
+            DispatchQueue.main.async {
+                self.models.append("ChatGPT: " + respnse)
+                self.text = ""
+            }
+        }
     }
 }
 

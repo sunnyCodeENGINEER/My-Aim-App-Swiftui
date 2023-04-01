@@ -11,7 +11,8 @@ import SwiftUI
 struct My_AIM_App_SwiftuiApp: App {
     var body: some Scene {
         WindowGroup {
-            MainAppView()
+//            MainAppView()
+            PersonalStudyGuideView()
         }
     }
 }
