@@ -29,6 +29,8 @@
 		25B4D9AC29D6330E005C19DE /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25B4D9AB29D6330E005C19DE /* OpenAISwift */; };
 		25B4D9AE29D63361005C19DE /* ChatGPTResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9AD29D63361005C19DE /* ChatGPTResponseViewModel.swift */; };
 		25B4D9B029D63781005C19DE /* PersonalStudyGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9AF29D63781005C19DE /* PersonalStudyGuideView.swift */; };
+		25B4D9B629D7BE21005C19DE /* MainAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */; };
+		25B4D9B829D7BE7E005C19DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9B729D7BE7E005C19DE /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		25B2392F29CF1ED000407474 /* DetailedArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedArticleView.swift; sourceTree = "<group>"; };
 		25B4D9AD29D63361005C19DE /* ChatGPTResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponseViewModel.swift; sourceTree = "<group>"; };
 		25B4D9AF29D63781005C19DE /* PersonalStudyGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStudyGuideView.swift; sourceTree = "<group>"; };
+		25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTabView.swift; sourceTree = "<group>"; };
+		25B4D9B729D7BE7E005C19DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 				2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */,
 				2538E2E429A55B100008DE92 /* ContentView.swift */,
 				250F4E1E29CE2AE500814AD8 /* SwiftUIView.swift */,
+				25B4D9B429D7BE05005C19DE /* Main App Views */,
 				2552A98429A55BC700B6BE5F /* Models */,
 				2552A98329A55BB000B6BE5F /* View Models */,
 				2538E30C29A55B770008DE92 /* Views */,
@@ -169,6 +174,7 @@
 				2552A98729A55CCB00B6BE5F /* UserProfileView.swift */,
 				2552A98929A55CD900B6BE5F /* UserResultsView.swift */,
 				2552A98B29A55CE900B6BE5F /* UserFeesView.swift */,
+				25B4D9B729D7BE7E005C19DE /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +199,14 @@
 				25B4D9AD29D63361005C19DE /* ChatGPTResponseViewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		25B4D9B429D7BE05005C19DE /* Main App Views */ = {
+			isa = PBXGroup;
+			children = (
+				25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */,
+			);
+			path = "Main App Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,9 +354,11 @@
 				250F4E1D29CE250400814AD8 /* ArticleListResponse.swift in Sources */,
 				250F4E2329CE6B7700814AD8 /* NewsList.swift in Sources */,
 				250F4E1B29BB494500814AD8 /* MainViewHeader.swift in Sources */,
+				25B4D9B829D7BE7E005C19DE /* HomeView.swift in Sources */,
 				25B2393029CF1ED000407474 /* DetailedArticleView.swift in Sources */,
 				250F4E1929BA8CF700814AD8 /* NewsListRow.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
+				25B4D9B629D7BE21005C19DE /* MainAppTabView.swift in Sources */,
 				250F4E2129CE6B7700814AD8 /* CachedAsyncImage.swift in Sources */,
 				25B4D9B029D63781005C19DE /* PersonalStudyGuideView.swift in Sources */,
 				25B4D9AE29D63361005C19DE /* ChatGPTResponseViewModel.swift in Sources */,

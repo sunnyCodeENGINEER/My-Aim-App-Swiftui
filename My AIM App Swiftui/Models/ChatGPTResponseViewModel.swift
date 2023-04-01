@@ -16,7 +16,7 @@ final class ChatGPTModel: ObservableObject {
     private var client: OpenAISwift?
     
     func setup() {
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "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")
     }
     
     func send(text: String, completion: @escaping (String) -> Void) {
