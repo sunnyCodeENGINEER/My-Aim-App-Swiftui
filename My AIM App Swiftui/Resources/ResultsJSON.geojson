@@ -1,0 +1,41 @@
+{
+  "lastName": "Donkor",
+  "firstName": "Emmanuel",
+  "otherNames": "Kofi Awuateh",
+  "year": 300,
+  "programme": "Computer Engineering",
+  "currentCWA": 98.56,
+  "averageForSemestrer": 98
+  "courses": {
+      {
+        "name": "MATH 252",
+        "credits": 4,
+        "score": "98",
+        "grade": "A"
+      },
+      {
+        "name": "ENGL 252",
+        "credits": 1,
+        "score": "98",
+        "grade": "A"
+      },
+      {
+        "name": "COE 252",
+        "credits": 2,
+        "score": "98",
+        "grade": "A"
+      },
+      {
+        "name": "TE 252",
+        "credits": 2,
+        "score": "98",
+        "grade": "A"
+      },
+      {
+        "name": "COE 257",
+        "credits": 3,
+        "score": "98",
+        "grade": "A"
+      }
+  }
+}
