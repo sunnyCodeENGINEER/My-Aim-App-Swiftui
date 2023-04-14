@@ -31,6 +31,7 @@
 		25B4D9B029D63781005C19DE /* PersonalStudyGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9AF29D63781005C19DE /* PersonalStudyGuideView.swift */; };
 		25B4D9B629D7BE21005C19DE /* MainAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */; };
 		25B4D9B829D7BE7E005C19DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9B729D7BE7E005C19DE /* HomeView.swift */; };
+		25B4D9BB29E9C091005C19DE /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9BA29E9C091005C19DE /* MainMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		25B4D9AF29D63781005C19DE /* PersonalStudyGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStudyGuideView.swift; sourceTree = "<group>"; };
 		25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTabView.swift; sourceTree = "<group>"; };
 		25B4D9B729D7BE7E005C19DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		25B4D9BA29E9C091005C19DE /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		25B4D9BD29E9C4C1005C19DE /* ResultsJSON.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResultsJSON.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2538E2E229A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift */,
+				25B4D9BC29E9C479005C19DE /* Resources */,
 				2538E2E429A55B100008DE92 /* ContentView.swift */,
 				250F4E1E29CE2AE500814AD8 /* SwiftUIView.swift */,
 				25B4D9B429D7BE05005C19DE /* Main App Views */,
@@ -182,6 +186,8 @@
 		2552A98329A55BB000B6BE5F /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				25B4D9BE29E9C7FA005C19DE /* Results View */,
+				25B4D9B929E9C06F005C19DE /* Map View */,
 				2552A98D29A55D1C00B6BE5F /* NextClassButton.swift */,
 				250F4E1829BA8CF700814AD8 /* NewsListRow.swift */,
 				250F4E2229CE6B7700814AD8 /* NewsList.swift */,
@@ -207,6 +213,29 @@
 				25B4D9B529D7BE21005C19DE /* MainAppTabView.swift */,
 			);
 			path = "Main App Views";
+			sourceTree = "<group>";
+		};
+		25B4D9B929E9C06F005C19DE /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				25B4D9BA29E9C091005C19DE /* MainMapView.swift */,
+			);
+			path = "Map View";
+			sourceTree = "<group>";
+		};
+		25B4D9BC29E9C479005C19DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25B4D9BD29E9C4C1005C19DE /* ResultsJSON.geojson */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25B4D9BE29E9C7FA005C19DE /* Results View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Results View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B4D9BB29E9C091005C19DE /* MainMapView.swift in Sources */,
 				2552A98A29A55CD900B6BE5F /* UserResultsView.swift in Sources */,
 				2538E2E529A55B100008DE92 /* ContentView.swift in Sources */,
 				250F4E1F29CE2AE500814AD8 /* SwiftUIView.swift in Sources */,

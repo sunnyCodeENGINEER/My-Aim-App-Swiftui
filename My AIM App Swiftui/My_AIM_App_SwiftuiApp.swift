@@ -13,6 +13,7 @@ struct My_AIM_App_SwiftuiApp: App {
         WindowGroup {
 //            MainAppView()
 //            PersonalStudyGuideView()
+//            MainMapView()
             MainAppTabView()
         }
     }

@@ -52,9 +52,10 @@ struct NewsListRow: View {
             if image != nil {
                 Image(uiImage: image!)
                     .resizable()
+                    .cornerRadius(10)
                     .scaledToFit()
                     .frame(width: 100, height: 100)
-                    .cornerRadius(10)
+//                    .cornerRadius(10)
                     .padding(.horizontal, 10)
             } else if errorMessage != nil {
                 Image(systemName: "exclamationmark.triangle.fill")
@@ -68,16 +69,17 @@ struct NewsListRow: View {
             } else {
                 ProgressView()
                     .frame(width: 100, height: 100)
+                    .padding(.horizontal, 10)
             }
             
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.body)
                     .fontWeight(.medium)
-                Text(summary)
-                    .font(.caption)
+//                Text(summary)
+//                    .font(.caption)
                 
-                Spacer()
+//                Spacer()
                 
                 HStack {
                     Spacer()
