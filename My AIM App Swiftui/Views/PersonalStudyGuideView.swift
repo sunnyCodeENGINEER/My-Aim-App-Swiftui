@@ -67,10 +67,11 @@ struct PersonalStudyGuideView: View {
         models.append("Me: \(text)")
         messageBlocks.append(MessageBlock(author: "Me", content: text))
         chatGPTviewModel.send(text: text) { respnse in
+            self.text = ""
             DispatchQueue.main.async {
                 self.models.append("ChatGPT: " + respnse)
                 self.messageBlocks.append(MessageBlock(author: "ChatGPT", content: respnse))
-                self.text = ""
+//                self.text = ""
             }
         }
     }

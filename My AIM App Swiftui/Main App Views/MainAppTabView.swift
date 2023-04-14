@@ -10,15 +10,15 @@ import SwiftUI
 struct MainAppTabView: View {
     var body: some View {
         TabView{
-            Text("First View")
+            HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                 }
-            Text("Second View")
+            MainAppView()
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                 }
-            Text("Third View")
+            PersonalStudyGuideView()
                 .tabItem {
                     Image(systemName: "book.fill")
                 }
@@ -29,5 +29,8 @@ struct MainAppTabView: View {
 struct MainAppTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainAppTabView()
+        
+        MainAppTabView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }

@@ -23,7 +23,8 @@ struct DetailedArticleView: View {
                     image
                         .resizable()
                         .frame(height: 300)
-                        .aspectRatio(contentMode: .fit)
+//                        .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
                         .cornerRadius(20)
                         .padding(.bottom)
                 case .failure:
@@ -47,7 +48,7 @@ struct DetailedArticleView: View {
                 }
             })
             .frame(height: 300)
-            .padding(.vertical)
+            .padding(.bottom)
             
             
             VStack(alignment: .leading) {
@@ -74,7 +75,7 @@ struct DetailedArticleView: View {
                     .cornerRadius(30)
             }
         }
-        .padding()
+        .padding(.horizontal)
         .onAppear {
             articleDate = getArticleDate()
         }

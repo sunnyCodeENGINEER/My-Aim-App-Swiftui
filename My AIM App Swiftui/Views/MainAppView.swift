@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainAppView: View {
-    // A temporary fix to check if everything else is working accordingly
     @State var articles: [Article] = []
     
     var body: some View {
@@ -63,5 +62,8 @@ struct MainAppView: View {
 struct MainAppView_Previews: PreviewProvider {
     static var previews: some View {
         MainAppView()
+        
+        MainAppView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }
