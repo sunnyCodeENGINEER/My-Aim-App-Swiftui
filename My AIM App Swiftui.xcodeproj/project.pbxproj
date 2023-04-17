@@ -32,6 +32,7 @@
 		25B4D9B829D7BE7E005C19DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9B729D7BE7E005C19DE /* HomeView.swift */; };
 		25B4D9BB29E9C091005C19DE /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9BA29E9C091005C19DE /* MainMapView.swift */; };
 		25B4D9C029E9C894005C19DE /* UserResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9BF29E9C894005C19DE /* UserResultsView.swift */; };
+		25B4D9C229EB7B7F005C19DE /* SemesterResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9C129EB7B7F005C19DE /* SemesterResultsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		25B4D9BA29E9C091005C19DE /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		25B4D9BD29E9C4C1005C19DE /* ResultsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ResultsJSON.json; sourceTree = "<group>"; };
 		25B4D9BF29E9C894005C19DE /* UserResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsView.swift; sourceTree = "<group>"; };
+		25B4D9C129EB7B7F005C19DE /* SemesterResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterResultsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				25B4D9BF29E9C894005C19DE /* UserResultsView.swift */,
+				25B4D9C129EB7B7F005C19DE /* SemesterResultsListView.swift */,
 			);
 			path = "Results View";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B4D9C029E9C894005C19DE /* UserResultsView.swift in Sources */,
+				25B4D9C229EB7B7F005C19DE /* SemesterResultsListView.swift in Sources */,
 				25B4D9BB29E9C091005C19DE /* MainMapView.swift in Sources */,
 				2538E2E529A55B100008DE92 /* ContentView.swift in Sources */,
 				250F4E1F29CE2AE500814AD8 /* SwiftUIView.swift in Sources */,
