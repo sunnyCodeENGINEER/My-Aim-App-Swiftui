@@ -42,7 +42,6 @@ struct MainViewHeader: View {
             }
             .padding(.vertical)
             
-//            Spacer()
         }
     }
 }
@@ -55,3 +54,4 @@ struct MainViewHeader_Previews: PreviewProvider {
             .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }
+
