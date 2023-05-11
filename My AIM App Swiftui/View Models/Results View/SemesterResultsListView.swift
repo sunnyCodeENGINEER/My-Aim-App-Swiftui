@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SemesterResultsListView: View {
+    @State var isPresented: Bool = false
+    @Binding var currentMenu: CurrentMenu
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
@@ -33,6 +36,26 @@ struct SemesterResultsListView: View {
                     }))
                 .padding(.horizontal)
                 .navigationTitle("RESULTS")
+                .toolbar {
+                    Button {
+                        isPresented = true
+                    } label: {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .shadow(color: .black.opacity(0.5), radius: 5)
+                            .overlay {
+                                Circle()
+                                    .stroke(lineWidth: 2)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.leading)
+                    }
+                }
+                .sheet(isPresented: $isPresented) {
+                    MenuSheet(animate: $isPresented, currentMenu: $currentMenu)
+                }
             }
         }
     }
@@ -40,6 +63,6 @@ struct SemesterResultsListView: View {
 
 struct SemesterResultsListView_Previews: PreviewProvider {
     static var previews: some View {
-        SemesterResultsListView()
+        SemesterResultsListView(currentMenu: .constant(.home))
     }
 }

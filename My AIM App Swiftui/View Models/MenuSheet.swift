@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MenuSheet: View {
-    @State var animate: Bool = false
+    @Binding var animate: Bool
+    @Binding var currentMenu: CurrentMenu
+//    var dismis
     var body: some View {
         ZStack {
             VStack {
@@ -20,13 +22,19 @@ struct MenuSheet: View {
                     Image(systemName: "xmark.circle")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 30, height: 30)
                 }
+                .padding(.top)
                 Spacer()
             }
             
             VStack {
-                MenuButtons(title: "Results", delay: 0.5, animate: $animate)
+                if currentMenu != .home {
+                    MenuButtons(title: "Home", delay: 0.5, animate: $animate, currentMenu: $currentMenu, setTo: .home)
+                }
+                if currentMenu != .results {
+                    MenuButtons(title: "Results", delay: 0.5, animate: $animate, currentMenu: $currentMenu, setTo: .results)
+                }
             }
         }
     }
@@ -34,7 +42,7 @@ struct MenuSheet: View {
 
 struct MenuSheet_Previews: PreviewProvider {
     static var previews: some View {
-        MenuSheet()
+        MenuSheet(animate: .constant(false), currentMenu: .constant(.home))
     }
 }
 
@@ -42,22 +50,33 @@ struct MenuButtons: View {
     var title: String
     var delay: Double
     @Binding var animate: Bool
+    @Binding var currentMenu: CurrentMenu
+    var setTo: CurrentMenu
     
     var body: some View {
-        HStack {
-            HStack {
-                Text(title)
-                    .padding()
-            }
-            .padding(.horizontal)
-            .background(RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 2))
-            .offset(x: !animate ? -1000 : 0)
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+        Button {
+            currentMenu = setTo
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                 withAnimation(.easeInOut(duration: 1)) {
-                    animate = true
+                    animate = false
+                }
+            }
+        } label: {
+            HStack {
+                HStack {
+                    Text(title)
+                        .padding()
+                }
+                .padding(.horizontal)
+                .background(RoundedRectangle(cornerRadius: 10)
+                    .stroke(lineWidth: 2))
+                .offset(y: !animate ? 1000 : 0)
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                    withAnimation(.easeInOut(duration: 1)) {
+                        animate = true
+                    }
                 }
             }
         }

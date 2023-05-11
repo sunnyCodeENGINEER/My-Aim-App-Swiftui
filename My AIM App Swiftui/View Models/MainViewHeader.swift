@@ -10,21 +10,30 @@ import SwiftUI
 struct MainViewHeader: View {
     var userLastName: String = "Doe"
     var userFirstName: String = "John"
+    @Binding var isPresented: Bool
+    @Binding var currentMenu: CurrentMenu
     
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
-                    .shadow(color: .black.opacity(0.5), radius: 5)
-                    .overlay {
-                        Circle()
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(.white)
-                    }
-                    .padding(.leading)
+                Button {
+                    isPresented = true
+                } label: {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                        .shadow(color: .black.opacity(0.5), radius: 5)
+                        .overlay {
+                            Circle()
+                                .stroke(lineWidth: 2)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.leading)
+                }
+                .sheet(isPresented: $isPresented) {
+                    MenuSheet(animate: $isPresented, currentMenu: $currentMenu)
+                }
                 
                 Spacer()
                 
@@ -48,9 +57,9 @@ struct MainViewHeader: View {
 
 struct MainViewHeader_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewHeader()
+        MainViewHeader(isPresented: .constant(false), currentMenu: .constant(.home))
         
-        MainViewHeader()
+        MainViewHeader(isPresented: .constant(false), currentMenu: .constant(.home))
             .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }

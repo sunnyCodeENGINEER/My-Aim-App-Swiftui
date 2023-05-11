@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct MainAppTabView: View {
+    @State var currentMenu: CurrentMenu = .home
+    
     var body: some View {
-        TabView{
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                }
-            MainAppView()
-                .tabItem {
-                    Image(systemName: "newspaper.fill")
-                }
-            PersonalStudyGuideView()
-                .tabItem {
-                    Image(systemName: "book.fill")
-                }
+        if currentMenu == .home{
+            TabView{
+                HomeView(currentMenu: $currentMenu)
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                    }
+                MainAppView()
+                    .tabItem {
+                        Image(systemName: "newspaper.fill")
+                    }
+                PersonalStudyGuideView()
+                    .tabItem {
+                        Image(systemName: "book.fill")
+                    }
+            }
+        } else if currentMenu == .results {
+            SemesterResultsListView(currentMenu: $currentMenu)
         }
     }
 }

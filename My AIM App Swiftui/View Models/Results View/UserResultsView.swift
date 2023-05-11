@@ -31,19 +31,19 @@ struct CWARing: View {
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 260, height: 260)
+                .frame(width: 220, height: 220)
                 .foregroundColor(Color("myWhite"))
                 .blur(radius: 10)
                 .shadow(color: .black, radius: 20, x: 20, y: 10)
             
             Circle()
                 .stroke(.gray.opacity(0.5), style: StrokeStyle(lineWidth: 28, lineCap: .round))
-                .frame(width: 200, height: 200)
+                .frame(width: 180, height: 180)
             
             Circle()
                 .trim(from: 0, to: trimAnimation ? CGFloat(student.currentCWA) / 100 : .zero)
                 .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .frame(width: 200, height: 200)
+                .frame(width: 180, height: 180)
                 .rotationEffect(Angle(degrees: -90))
             
             if trimAnimation {
@@ -67,34 +67,38 @@ struct ResultListRow: View {
     @State var trimAnimation: Bool = false
     
     var body: some View {
-        VStack {
-            ForEach(student.courses, id: \.name) { course in
-                HStack {
-                    Text("\(course.name) (\(course.credits) credits): ")
-                    Spacer()
-                    
-                    ZStack {
-                        Circle()
-                            .trim(from: 0, to: trimAnimation ? CGFloat(course.score) / 100 : .zero)
-                            .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round))
-                            .frame(width: 50, height: 50)
-                            .rotationEffect(Angle(degrees: -90))
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(student.courses, id: \.name) { course in
+                    HStack {
+                        Text("\(course.name) (\(course.credits) credits): ")
+                        Spacer()
                         
-                        if trimAnimation {
-                            Text("\(course.grade)")
+                        ZStack {
+                            Circle()
+                                .trim(from: 0, to: trimAnimation ? CGFloat(course.score) / 100 : .zero)
+                                .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                                .frame(width: 50, height: 50)
+                                .rotationEffect(Angle(degrees: -90))
+                            
+                            if trimAnimation {
+                                Text("\(course.grade)")
+                            }
                         }
                     }
+                    .padding(.horizontal, 50)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 15)
+                        .fill(.thickMaterial)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(lineWidth: 3)
+                        }))
+                    .padding(.horizontal)
+                    .padding(.top, 2)
                 }
-                .padding(.horizontal, 50)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15)
-                    .fill(.thickMaterial)
-                    .overlay(content: {
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(lineWidth: 3)
-                    }))
-                .padding(.horizontal)
             }
+            .padding(.bottom)
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
@@ -109,6 +113,9 @@ struct ResultListRow: View {
 struct UserResultsView_Previews: PreviewProvider {
     static var previews: some View {
         UserResultsView()
+        
+        UserResultsView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
     }
 }
 
