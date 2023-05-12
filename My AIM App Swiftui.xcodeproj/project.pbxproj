@@ -35,6 +35,7 @@
 		25B4D9C229EB7B7F005C19DE /* SemesterResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9C129EB7B7F005C19DE /* SemesterResultsListView.swift */; };
 		25B4D9C429FFE7EE005C19DE /* MenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4D9C329FFE7EE005C19DE /* MenuSheet.swift */; };
 		25B4DA012A084BB7005C19DE /* CurrentMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4DA002A084BB7005C19DE /* CurrentMenu.swift */; };
+		25B4DA032A0E6A19005C19DE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4DA022A0E6A19005C19DE /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		25B4D9C129EB7B7F005C19DE /* SemesterResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterResultsListView.swift; sourceTree = "<group>"; };
 		25B4D9C329FFE7EE005C19DE /* MenuSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSheet.swift; sourceTree = "<group>"; };
 		25B4DA002A084BB7005C19DE /* CurrentMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMenu.swift; sourceTree = "<group>"; };
+		25B4DA022A0E6A19005C19DE /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				2552A98729A55CCB00B6BE5F /* UserProfileView.swift */,
 				2552A98B29A55CE900B6BE5F /* UserFeesView.swift */,
 				25B4D9B729D7BE7E005C19DE /* HomeView.swift */,
+				25B4DA022A0E6A19005C19DE /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				25B4D9C429FFE7EE005C19DE /* MenuSheet.swift in Sources */,
 				2538E2E329A55B100008DE92 /* My_AIM_App_SwiftuiApp.swift in Sources */,
 				25B4D9B629D7BE21005C19DE /* MainAppTabView.swift in Sources */,
+				25B4DA032A0E6A19005C19DE /* SplashScreen.swift in Sources */,
 				250F4E2129CE6B7700814AD8 /* CachedAsyncImage.swift in Sources */,
 				25B4DA012A084BB7005C19DE /* CurrentMenu.swift in Sources */,
 				25B4D9B029D63781005C19DE /* PersonalStudyGuideView.swift in Sources */,
